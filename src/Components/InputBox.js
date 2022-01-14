@@ -34,7 +34,7 @@ function InputBox() {
     <section className="input-box">
 
       <form onSubmit={submitHandler}>
-        <input type="text" placeholder="Message with a generated name" value={inputMessage} onChange={(e) => setInputMessage(e.target.value)}/>
+        <input type="text" placeholder="Message..." value={inputMessage} onChange={(e) => setInputMessage(e.target.value)}/>
         <button type="submit">Send</button>
       </form>
     </section>
