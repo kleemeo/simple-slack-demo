@@ -30,9 +30,6 @@ export default function App() {
 
   return (
     <>
-      <header>
-        <h1>Simple Slack</h1>
-      </header>
       <main>
         <div className="main-window">
           <ChannelCtx.Provider value={value}>

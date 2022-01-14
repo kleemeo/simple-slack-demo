@@ -1,6 +1,6 @@
 import firebase from "../firebase";
 
-import { useContext, useEffect } from "preact/hooks";
+import { useContext, useState } from "preact/hooks";
 import { ChannelCtx } from "../index";
 
 
@@ -20,18 +20,21 @@ const submitMessage = (message, channel) => {
 
 function InputBox() {
 
+  const [inputMessage, setInputMessage] = useState('');
+
   const { selectedChannel } = useContext(ChannelCtx);
 
   const submitHandler = e => {
     e.preventDefault();
-    submitMessage("TEST", selectedChannel);
+    submitMessage(inputMessage, selectedChannel);
+    setInputMessage('')
   }
 
   return (
     <section className="input-box">
 
       <form onSubmit={submitHandler}>
-        <textarea type="textarea" placeholder="Message with a generated name"></textarea>
+        <input type="text" placeholder="Message with a generated name" value={inputMessage} onChange={(e) => setInputMessage(e.target.value)}/>
         <button type="submit">Send</button>
       </form>
     </section>

@@ -13,11 +13,15 @@ img { max-width: 100% }
 html, body {
 	font-size: 14px/1.21;
 	font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-color: rgb(57, 60, 65);
 }
 
 h1 {
-	text-align: center;
+  font-weight: 400;
+  color: white;
+  padding: 1rem;
+	text-align: left;
 }
 
 ul,
@@ -46,10 +50,11 @@ li:hover {
 .main-window {
   margin: 0 auto;
   border: 1px solid black;
-  width: 90vw;
-  height: 90vw;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  background-color: rgb(57, 60, 65);
 }
 
 .side-bar {
@@ -100,11 +105,15 @@ li:hover {
 }
 
 .input-box {
+  position: sticky;
+  bottom: 1px;
+  height: 200px;
+  width: 100%;
   background-color: rgb(57, 60, 65);
   padding: 2rem;
 }
 
-.input-box textarea
+.input-box input
 { 
   color: white;
   background-color: rgb(57, 60, 65);

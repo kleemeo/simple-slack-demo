@@ -10,6 +10,7 @@ function SideBar(props) {
 
   return (
     <section className="side-bar">
+      <h1>Simple Slack Demo</h1>
       <ul> 
         {dataArr.map(channel => (
           <ChannelHeading key={dataArr.indexOf(channel)} name={dataArr.indexOf(channel)}/> 
